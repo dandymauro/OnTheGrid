@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5FCE698C1350B73500C591F4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCE698B1350B73500C591F4 /* UIKit.framework */; };
+		5FCE698E1350B73500C591F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCE698D1350B73500C591F4 /* Foundation.framework */; };
+		5FCE69901350B73500C591F4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCE698F1350B73500C591F4 /* CoreGraphics.framework */; };
+		5FCE69961350B73500C591F4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE69941350B73500C591F4 /* InfoPlist.strings */; };
+		5FCE69991350B73500C591F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE69981350B73500C591F4 /* main.m */; };
+		5FCE699C1350B73500C591F4 /* OnTheGridAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE699B1350B73500C591F4 /* OnTheGridAppDelegate.m */; };
+		5FCE699F1350B73600C591F4 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE699D1350B73600C591F4 /* MainWindow.xib */; };
+		5FCE69A21350B73600C591F4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE69A11350B73600C591F4 /* MainViewController.m */; };
+		5FCE69A41350B73600C591F4 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE69A31350B73600C591F4 /* MainView.xib */; };
+		5FCE69A71350B73600C591F4 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE69A61350B73600C591F4 /* FlipsideViewController.m */; };
+		5FCE69A91350B73600C591F4 /* FlipsideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE69A81350B73600C591F4 /* FlipsideView.xib */; };
+		5FCE69B01350B73600C591F4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCE698B1350B73500C591F4 /* UIKit.framework */; };
+		5FCE69B11350B73600C591F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCE698D1350B73500C591F4 /* Foundation.framework */; };
+		5FCE69B21350B73600C591F4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCE698F1350B73500C591F4 /* CoreGraphics.framework */; };
+		5FCE69BA1350B73600C591F4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE69B81350B73600C591F4 /* InfoPlist.strings */; };
+		5FCE69BD1350B73600C591F4 /* OnTheGridTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE69BC1350B73600C591F4 /* OnTheGridTests.h */; };
+		5FCE69BF1350B73600C591F4 /* OnTheGridTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE69BE1350B73600C591F4 /* OnTheGridTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5FCE69B31350B73600C591F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5FCE697E1350B73500C591F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FCE69861350B73500C591F4;
+			remoteInfo = OnTheGrid;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5FCE69871350B73500C591F4 /* OnTheGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FCE698B1350B73500C591F4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5FCE698D1350B73500C591F4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5FCE698F1350B73500C591F4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5FCE69931350B73500C591F4 /* OnTheGrid-Info.plist */ = {isa = PBXFileReference; path = "OnTheGrid-Info.plist"; sourceTree = "<group>"; };
+		5FCE69951350B73500C591F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5FCE69971350B73500C591F4 /* OnTheGrid-Prefix.pch */ = {isa = PBXFileReference; path = "OnTheGrid-Prefix.pch"; sourceTree = "<group>"; };
+		5FCE69981350B73500C591F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5FCE699A1350B73500C591F4 /* OnTheGridAppDelegate.h */ = {isa = PBXFileReference; path = OnTheGridAppDelegate.h; sourceTree = "<group>"; };
+		5FCE699B1350B73500C591F4 /* OnTheGridAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnTheGridAppDelegate.m; sourceTree = "<group>"; };
+		5FCE699E1350B73600C591F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		5FCE69A01350B73600C591F4 /* MainViewController.h */ = {isa = PBXFileReference; path = MainViewController.h; sourceTree = "<group>"; };
+		5FCE69A11350B73600C591F4 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		5FCE69A31350B73600C591F4 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		5FCE69A51350B73600C591F4 /* FlipsideViewController.h */ = {isa = PBXFileReference; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		5FCE69A61350B73600C591F4 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		5FCE69A81350B73600C591F4 /* FlipsideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlipsideView.xib; sourceTree = "<group>"; };
+		5FCE69AF1350B73600C591F4 /* OnTheGridTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTheGridTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FCE69B71350B73600C591F4 /* OnTheGridTests-Info.plist */ = {isa = PBXFileReference; path = "OnTheGridTests-Info.plist"; sourceTree = "<group>"; };
+		5FCE69B91350B73600C591F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5FCE69BB1350B73600C591F4 /* OnTheGridTests-Prefix.pch */ = {isa = PBXFileReference; path = "OnTheGridTests-Prefix.pch"; sourceTree = "<group>"; };
+		5FCE69BC1350B73600C591F4 /* OnTheGridTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnTheGridTests.h; sourceTree = "<group>"; };
+		5FCE69BE1350B73600C591F4 /* OnTheGridTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnTheGridTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5FCE69841350B73500C591F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FCE698C1350B73500C591F4 /* UIKit.framework in Frameworks */,
+				5FCE698E1350B73500C591F4 /* Foundation.framework in Frameworks */,
+				5FCE69901350B73500C591F4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FCE69AB1350B73600C591F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FCE69B01350B73600C591F4 /* UIKit.framework in Frameworks */,
+				5FCE69B11350B73600C591F4 /* Foundation.framework in Frameworks */,
+				5FCE69B21350B73600C591F4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5FCE697C1350B73500C591F4 = {
+			isa = PBXGroup;
+			children = (
+				5FCE69911350B73500C591F4 /* OnTheGrid */,
+				5FCE69B51350B73600C591F4 /* OnTheGridTests */,
+				5FCE698A1350B73500C591F4 /* Frameworks */,
+				5FCE69881350B73500C591F4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5FCE69881350B73500C591F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FCE69871350B73500C591F4 /* OnTheGrid.app */,
+				5FCE69AF1350B73600C591F4 /* OnTheGridTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5FCE698A1350B73500C591F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FCE698B1350B73500C591F4 /* UIKit.framework */,
+				5FCE698D1350B73500C591F4 /* Foundation.framework */,
+				5FCE698F1350B73500C591F4 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5FCE69911350B73500C591F4 /* OnTheGrid */ = {
+			isa = PBXGroup;
+			children = (
+				5FCE699A1350B73500C591F4 /* OnTheGridAppDelegate.h */,
+				5FCE699B1350B73500C591F4 /* OnTheGridAppDelegate.m */,
+				5FCE699D1350B73600C591F4 /* MainWindow.xib */,
+				5FCE69A01350B73600C591F4 /* MainViewController.h */,
+				5FCE69A11350B73600C591F4 /* MainViewController.m */,
+				5FCE69A31350B73600C591F4 /* MainView.xib */,
+				5FCE69A51350B73600C591F4 /* FlipsideViewController.h */,
+				5FCE69A61350B73600C591F4 /* FlipsideViewController.m */,
+				5FCE69A81350B73600C591F4 /* FlipsideView.xib */,
+				5FCE69921350B73500C591F4 /* Supporting Files */,
+			);
+			path = OnTheGrid;
+			sourceTree = "<group>";
+		};
+		5FCE69921350B73500C591F4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5FCE69931350B73500C591F4 /* OnTheGrid-Info.plist */,
+				5FCE69941350B73500C591F4 /* InfoPlist.strings */,
+				5FCE69971350B73500C591F4 /* OnTheGrid-Prefix.pch */,
+				5FCE69981350B73500C591F4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FCE69B51350B73600C591F4 /* OnTheGridTests */ = {
+			isa = PBXGroup;
+			children = (
+				5FCE69BC1350B73600C591F4 /* OnTheGridTests.h */,
+				5FCE69BE1350B73600C591F4 /* OnTheGridTests.m */,
+				5FCE69B61350B73600C591F4 /* Supporting Files */,
+			);
+			path = OnTheGridTests;
+			sourceTree = "<group>";
+		};
+		5FCE69B61350B73600C591F4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5FCE69B71350B73600C591F4 /* OnTheGridTests-Info.plist */,
+				5FCE69B81350B73600C591F4 /* InfoPlist.strings */,
+				5FCE69BB1350B73600C591F4 /* OnTheGridTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5FCE69861350B73500C591F4 /* OnTheGrid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FCE69C21350B73600C591F4 /* Build configuration list for PBXNativeTarget "OnTheGrid" */;
+			buildPhases = (
+				5FCE69831350B73500C591F4 /* Sources */,
+				5FCE69841350B73500C591F4 /* Frameworks */,
+				5FCE69851350B73500C591F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OnTheGrid;
+			productName = OnTheGrid;
+			productReference = 5FCE69871350B73500C591F4 /* OnTheGrid.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5FCE69AE1350B73600C591F4 /* OnTheGridTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FCE69C51350B73600C591F4 /* Build configuration list for PBXNativeTarget "OnTheGridTests" */;
+			buildPhases = (
+				5FCE69AA1350B73600C591F4 /* Sources */,
+				5FCE69AB1350B73600C591F4 /* Frameworks */,
+				5FCE69AC1350B73600C591F4 /* Resources */,
+				5FCE69AD1350B73600C591F4 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FCE69B41350B73600C591F4 /* PBXTargetDependency */,
+			);
+			name = OnTheGridTests;
+			productName = OnTheGridTests;
+			productReference = 5FCE69AF1350B73600C591F4 /* OnTheGridTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5FCE697E1350B73500C591F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Nuance Communications";
+			};
+			buildConfigurationList = 5FCE69811350B73500C591F4 /* Build configuration list for PBXProject "OnTheGrid" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5FCE697C1350B73500C591F4;
+			productRefGroup = 5FCE69881350B73500C591F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5FCE69861350B73500C591F4 /* OnTheGrid */,
+				5FCE69AE1350B73600C591F4 /* OnTheGridTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5FCE69851350B73500C591F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FCE69961350B73500C591F4 /* InfoPlist.strings in Resources */,
+				5FCE699F1350B73600C591F4 /* MainWindow.xib in Resources */,
+				5FCE69A41350B73600C591F4 /* MainView.xib in Resources */,
+				5FCE69A91350B73600C591F4 /* FlipsideView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FCE69AC1350B73600C591F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FCE69BA1350B73600C591F4 /* InfoPlist.strings in Resources */,
+				5FCE69BD1350B73600C591F4 /* OnTheGridTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5FCE69AD1350B73600C591F4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FCE69831350B73500C591F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FCE69991350B73500C591F4 /* main.m in Sources */,
+				5FCE699C1350B73500C591F4 /* OnTheGridAppDelegate.m in Sources */,
+				5FCE69A21350B73600C591F4 /* MainViewController.m in Sources */,
+				5FCE69A71350B73600C591F4 /* FlipsideViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FCE69AA1350B73600C591F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FCE69BF1350B73600C591F4 /* OnTheGridTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5FCE69B41350B73600C591F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5FCE69861350B73500C591F4 /* OnTheGrid */;
+			targetProxy = 5FCE69B31350B73600C591F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5FCE69941350B73500C591F4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FCE69951350B73500C591F4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5FCE699D1350B73600C591F4 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FCE699E1350B73600C591F4 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		5FCE69B81350B73600C591F4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FCE69B91350B73600C591F4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5FCE69C01350B73600C591F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5FCE69C11350B73600C591F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		5FCE69C31350B73600C591F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OnTheGrid/OnTheGrid-Prefix.pch";
+				INFOPLIST_FILE = "OnTheGrid/OnTheGrid-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5FCE69C41350B73600C591F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OnTheGrid/OnTheGrid-Prefix.pch";
+				INFOPLIST_FILE = "OnTheGrid/OnTheGrid-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5FCE69C61350B73600C591F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OnTheGrid.app/OnTheGrid";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OnTheGridTests/OnTheGridTests-Prefix.pch";
+				INFOPLIST_FILE = "OnTheGridTests/OnTheGridTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		5FCE69C71350B73600C591F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OnTheGrid.app/OnTheGrid";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OnTheGridTests/OnTheGridTests-Prefix.pch";
+				INFOPLIST_FILE = "OnTheGridTests/OnTheGridTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5FCE69811350B73500C591F4 /* Build configuration list for PBXProject "OnTheGrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FCE69C01350B73600C591F4 /* Debug */,
+				5FCE69C11350B73600C591F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FCE69C21350B73600C591F4 /* Build configuration list for PBXNativeTarget "OnTheGrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FCE69C31350B73600C591F4 /* Debug */,
+				5FCE69C41350B73600C591F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5FCE69C51350B73600C591F4 /* Build configuration list for PBXNativeTarget "OnTheGridTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FCE69C61350B73600C591F4 /* Debug */,
+				5FCE69C71350B73600C591F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5FCE697E1350B73500C591F4 /* Project object */;
+}

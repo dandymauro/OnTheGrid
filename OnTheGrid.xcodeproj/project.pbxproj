@@ -24,6 +24,8 @@
 		5FCE69BA1350B73600C591F4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE69B81350B73600C591F4 /* InfoPlist.strings */; };
 		5FCE69BD1350B73600C591F4 /* OnTheGridTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE69BC1350B73600C591F4 /* OnTheGridTests.h */; };
 		5FCE69BF1350B73600C591F4 /* OnTheGridTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE69BE1350B73600C591F4 /* OnTheGridTests.m */; };
+		5FCE69CB1350B75500C591F4 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE69C91350B75500C591F4 /* MainWindow-iPad.xib */; };
+		5FCE69D11350BA4C00C591F4 /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE69D01350BA4C00C591F4 /* GridView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,25 +43,28 @@
 		5FCE698B1350B73500C591F4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5FCE698D1350B73500C591F4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5FCE698F1350B73500C591F4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5FCE69931350B73500C591F4 /* OnTheGrid-Info.plist */ = {isa = PBXFileReference; path = "OnTheGrid-Info.plist"; sourceTree = "<group>"; };
+		5FCE69931350B73500C591F4 /* OnTheGrid-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OnTheGrid-Info.plist"; sourceTree = "<group>"; };
 		5FCE69951350B73500C591F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5FCE69971350B73500C591F4 /* OnTheGrid-Prefix.pch */ = {isa = PBXFileReference; path = "OnTheGrid-Prefix.pch"; sourceTree = "<group>"; };
+		5FCE69971350B73500C591F4 /* OnTheGrid-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnTheGrid-Prefix.pch"; sourceTree = "<group>"; };
 		5FCE69981350B73500C591F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5FCE699A1350B73500C591F4 /* OnTheGridAppDelegate.h */ = {isa = PBXFileReference; path = OnTheGridAppDelegate.h; sourceTree = "<group>"; };
+		5FCE699A1350B73500C591F4 /* OnTheGridAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnTheGridAppDelegate.h; sourceTree = "<group>"; };
 		5FCE699B1350B73500C591F4 /* OnTheGridAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnTheGridAppDelegate.m; sourceTree = "<group>"; };
 		5FCE699E1350B73600C591F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		5FCE69A01350B73600C591F4 /* MainViewController.h */ = {isa = PBXFileReference; path = MainViewController.h; sourceTree = "<group>"; };
+		5FCE69A01350B73600C591F4 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		5FCE69A11350B73600C591F4 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		5FCE69A31350B73600C591F4 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
-		5FCE69A51350B73600C591F4 /* FlipsideViewController.h */ = {isa = PBXFileReference; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		5FCE69A51350B73600C591F4 /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
 		5FCE69A61350B73600C591F4 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		5FCE69A81350B73600C591F4 /* FlipsideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlipsideView.xib; sourceTree = "<group>"; };
 		5FCE69AF1350B73600C591F4 /* OnTheGridTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTheGridTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FCE69B71350B73600C591F4 /* OnTheGridTests-Info.plist */ = {isa = PBXFileReference; path = "OnTheGridTests-Info.plist"; sourceTree = "<group>"; };
+		5FCE69B71350B73600C591F4 /* OnTheGridTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OnTheGridTests-Info.plist"; sourceTree = "<group>"; };
 		5FCE69B91350B73600C591F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5FCE69BB1350B73600C591F4 /* OnTheGridTests-Prefix.pch */ = {isa = PBXFileReference; path = "OnTheGridTests-Prefix.pch"; sourceTree = "<group>"; };
+		5FCE69BB1350B73600C591F4 /* OnTheGridTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnTheGridTests-Prefix.pch"; sourceTree = "<group>"; };
 		5FCE69BC1350B73600C591F4 /* OnTheGridTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnTheGridTests.h; sourceTree = "<group>"; };
 		5FCE69BE1350B73600C591F4 /* OnTheGridTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnTheGridTests.m; sourceTree = "<group>"; };
+		5FCE69CA1350B75500C591F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		5FCE69CF1350BA4B00C591F4 /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridView.h; path = OnTheGrid.xcodeproj/GridView.h; sourceTree = SOURCE_ROOT; };
+		5FCE69D01350BA4C00C591F4 /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridView.m; path = OnTheGrid.xcodeproj/GridView.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +123,9 @@
 		5FCE69911350B73500C591F4 /* OnTheGrid */ = {
 			isa = PBXGroup;
 			children = (
+				5FCE69CF1350BA4B00C591F4 /* GridView.h */,
+				5FCE69D01350BA4C00C591F4 /* GridView.m */,
+				5FCE69C81350B74A00C591F4 /* iPad */,
 				5FCE699A1350B73500C591F4 /* OnTheGridAppDelegate.h */,
 				5FCE699B1350B73500C591F4 /* OnTheGridAppDelegate.m */,
 				5FCE699D1350B73600C591F4 /* MainWindow.xib */,
@@ -161,6 +169,14 @@
 				5FCE69BB1350B73600C591F4 /* OnTheGridTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FCE69C81350B74A00C591F4 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				5FCE69C91350B75500C591F4 /* MainWindow-iPad.xib */,
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +253,7 @@
 				5FCE699F1350B73600C591F4 /* MainWindow.xib in Resources */,
 				5FCE69A41350B73600C591F4 /* MainView.xib in Resources */,
 				5FCE69A91350B73600C591F4 /* FlipsideView.xib in Resources */,
+				5FCE69CB1350B75500C591F4 /* MainWindow-iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +293,7 @@
 				5FCE699C1350B73500C591F4 /* OnTheGridAppDelegate.m in Sources */,
 				5FCE69A21350B73600C591F4 /* MainViewController.m in Sources */,
 				5FCE69A71350B73600C591F4 /* FlipsideViewController.m in Sources */,
+				5FCE69D11350BA4C00C591F4 /* GridView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +340,14 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		5FCE69C91350B75500C591F4 /* MainWindow-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FCE69CA1350B75500C591F4 /* en */,
+			);
+			name = "MainWindow-iPad.xib";
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -366,7 +392,9 @@
 				GCC_PREFIX_HEADER = "OnTheGrid/OnTheGrid-Prefix.pch";
 				INFOPLIST_FILE = "OnTheGrid/OnTheGrid-Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -380,7 +408,9 @@
 				GCC_PREFIX_HEADER = "OnTheGrid/OnTheGrid-Prefix.pch";
 				INFOPLIST_FILE = "OnTheGrid/OnTheGrid-Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

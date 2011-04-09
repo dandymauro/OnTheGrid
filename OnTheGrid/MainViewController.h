@@ -15,4 +15,9 @@
 
 - (IBAction)showInfo:(id)sender;
 
+- (void) drawGrid:(int)rows: (int)columns: (int)cellHeightPx: (int)cellWidthPx;
+- (void) drawGridBoundingBox;
+- (void)createGestureRecognizers;
+- (IBAction)handleSingleDoubleTap:(UIGestureRecognizer *)sender;
+    
 @end

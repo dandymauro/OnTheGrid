@@ -10,6 +10,8 @@
 
 
 @implementation FlipsideViewController
+@synthesize cellSizeSlider = _cellSizeSlider;
+@synthesize cellSizeSliderLabel = _cellSizeSliderLabel;
 
 @synthesize delegate=_delegate;
 
@@ -31,11 +33,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor viewFlipsideBackgroundColor];  
+    self.view.backgroundColor = [UIColor viewFlipsideBackgroundColor]; 
+    int cellSizeSliderValue = self.cellSizeSlider.value * 100;
+    self.cellSizeSliderLabel.text = [NSString stringWithFormat:@"%d", cellSizeSliderValue];
 }
 
 - (void)viewDidUnload
 {
+    [self setCellSizeSlider:nil];
+    [self setCellSizeSliderLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -54,4 +60,10 @@
     [self.delegate flipsideViewControllerDidFinish:self];
 }
 
+- (IBAction)sliderValueChanged:(id)sender {
+    //NSLog(@"sliderValueChanged");
+    int cellSizeSliderValue = self.cellSizeSlider.value * 100;
+    //NSLog(@"%@",[NSString stringWithFormat:@"%d", cellSizeSliderValue]);
+    self.cellSizeSliderLabel.text = [NSString stringWithFormat:@"%d", cellSizeSliderValue];
+}
 @end

@@ -12,11 +12,17 @@
 
 @interface FlipsideViewController : UIViewController {
 
+    UISlider *_cellSizeSlider;
+    UILabel *_cellSizeSliderLabel;
 }
 
 @property (nonatomic, assign) id <FlipsideViewControllerDelegate> delegate;
 
 - (IBAction)done:(id)sender;
+@property (nonatomic, retain) IBOutlet UISlider *cellSizeSlider;
+@property (nonatomic, retain) IBOutlet UILabel *cellSizeSliderLabel;
+
+- (IBAction)sliderValueChanged:(id)sender;
 
 @end
 

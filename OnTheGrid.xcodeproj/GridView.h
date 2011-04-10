@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CGPointObject.h"
 
 #define CELLSIZE 10
 
@@ -15,7 +16,7 @@
     int cellSize;
     CGPoint touchPoint;
     NSMutableArray * liveCells;
-    
+    CGPointObject * cells[320][480];
 }
 
 @property(assign, readwrite) int cellSize;

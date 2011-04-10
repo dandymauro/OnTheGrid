@@ -9,14 +9,16 @@
 #import "FlipsideViewController.h"
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate> {
-
+    NSTimer *generationTimer;
 }
 
 
 - (IBAction)showInfo:(id)sender;
-
 - (void)createGestureRecognizers;
 - (IBAction)handleSingleTap:(UIGestureRecognizer *)sender;
 - (IBAction)handleClearButton;
+- (IBAction)handlePlayButton;
+- (IBAction)handlePauseButton;
+- (void)doGeneration;
     
 @end

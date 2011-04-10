@@ -16,8 +16,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    self.view.bounds = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height - 44);
-
     [self createGestureRecognizers];
 }
 
@@ -63,6 +61,24 @@
 - (IBAction)handleClearButton{
     [((GridView *)[self.view.subviews objectAtIndex:0]) resetGrid];
     [[self.view.subviews objectAtIndex:0] setNeedsDisplay];
+}
+
+- (IBAction)handlePlayButton{
+    generationTimer = [NSTimer scheduledTimerWithTimeInterval:1 
+                                    target:self 
+                                    selector:@selector(doGeneration) 
+                                    userInfo:nil 
+                                    repeats:YES];
+}
+
+- (IBAction)handlePauseButton{
+    [generationTimer invalidate];
+    generationTimer = nil; // ensures we never invalidate an already invalid Timer
+}
+
+- (void)doGeneration{
+    NSLog(@"doGeneration");
+    
 }
 
 

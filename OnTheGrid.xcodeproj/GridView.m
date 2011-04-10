@@ -7,8 +7,6 @@
 //
 
 #import "GridView.h"
-#import "CGPointObject.h"
-
 
 @implementation GridView
 
@@ -29,9 +27,12 @@
 - (void)awakeFromNib{
     cellSize = CELLSIZE;
     touchPoint = CGPointMake(-10.0,-10.0);
-    liveCells = [[NSMutableArray alloc]init];
 }
 
+- (void)setCellSize:(int)aCellSize{
+    cellSize = aCellSize;
+    NSLog(@"bounds width %d height %d", self.bounds.size.width, self.bounds.size.height);
+}
 
 
 // Only override drawRect: if you perform custom drawing.
@@ -75,7 +76,6 @@
     [cellPointObj setX:xCell];
     [cellPointObj setY:yCell];
     [liveCells addObject:cellPointObj];
-
     
     // draw touched points
     for(int i=0;i < liveCells.count;i++){
@@ -89,6 +89,12 @@
         [fillPath fill]; 
     }
 }
+
+
+// Any live cell with fewer than two live neighbours dies, as if caused by under-population.
+// Any live cell with two or three live neighbours lives on to the next generation.
+// Any live cell with more than three live neighbours dies, as if by overcrowding.
+// Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
 - (void) resetGrid{
     [liveCells release];

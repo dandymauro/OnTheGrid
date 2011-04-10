@@ -64,7 +64,7 @@
 }
 
 - (IBAction)handlePlayButton{
-    generationTimer = [NSTimer scheduledTimerWithTimeInterval:1 
+    generationTimer = [NSTimer scheduledTimerWithTimeInterval:0.45 
                                     target:self 
                                     selector:@selector(doGeneration) 
                                     userInfo:nil 
@@ -74,11 +74,14 @@
 - (IBAction)handlePauseButton{
     [generationTimer invalidate];
     generationTimer = nil; // ensures we never invalidate an already invalid Timer
+    ((GridView *)[self.view.subviews objectAtIndex:0]).doGeneration = NO;
+    [[self.view.subviews objectAtIndex:0] setNeedsDisplay];
 }
 
 - (void)doGeneration{
     NSLog(@"doGeneration");
-    
+    ((GridView *)[self.view.subviews objectAtIndex:0]).doGeneration = YES;
+    [[self.view.subviews objectAtIndex:0] setNeedsDisplay];
 }
 
 

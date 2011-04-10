@@ -16,6 +16,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    self.view.bounds = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height - 44);
+
     [self createGestureRecognizers];
 }
 
@@ -25,8 +27,8 @@
     [self dismissModalViewControllerAnimated:YES];
     int cellSize = controller.cellSizeSlider.value * 100;
     NSLog(@"Setting cellSize to %d", cellSize);
-    ((GridView *)self.view).cellSize = cellSize;
-    [self.view setNeedsDisplay];
+    ((GridView *)[self.view.subviews objectAtIndex:0]).cellSize = cellSize;
+    [[self.view.subviews objectAtIndex:0] setNeedsDisplay];
 }
 
 - (IBAction)showInfo:(id)sender
@@ -44,18 +46,23 @@
     UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc]
                                                 initWithTarget:self action:@selector(handleSingleTap:)];
     singleFingerTap.numberOfTapsRequired = 1;
-    [self.view addGestureRecognizer:singleFingerTap];
+    [[self.view.subviews objectAtIndex:0] addGestureRecognizer:singleFingerTap];
     [singleFingerTap release];
 }
 
 - (IBAction)handleSingleTap:(UIGestureRecognizer *)sender {
     NSLog(@"handleSingleTap");
     CGPoint tapPoint = [sender locationInView:sender.view];
-    ((GridView *)self.view).touchPoint = tapPoint;
-    [self.view setNeedsDisplay];
+    ((GridView *)[self.view.subviews objectAtIndex:0]).touchPoint = tapPoint;
+    [[self.view.subviews objectAtIndex:0] setNeedsDisplay];
 //    [UIView beginAnimations:nil context:NULL];
 //    sender.view.center = tapPoint;
 //    [UIView commitAnimations];
+}
+
+- (IBAction)handleClearButton{
+    [((GridView *)[self.view.subviews objectAtIndex:0]) resetGrid];
+    [[self.view.subviews objectAtIndex:0] setNeedsDisplay];
 }
 
 

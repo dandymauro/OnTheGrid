@@ -14,13 +14,15 @@
 @interface GridView : UIView {
     int cellSize;
     CGPoint touchPoint;
+    NSMutableArray * liveCells;
     
 }
 
 @property(assign, readwrite) int cellSize;
 @property(assign, readwrite) CGPoint touchPoint;
+@property(nonatomic, retain) NSMutableArray * liveCells;
 
-- (void) drawGrid:(int)rows: (int)columns: (int)cellHeightPx: (int)cellWidthPx;
-- (void)awakeFromNib;
+- (void) awakeFromNib;
+- (void) resetGrid;
 
 @end

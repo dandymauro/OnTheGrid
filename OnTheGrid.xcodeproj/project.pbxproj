@@ -26,6 +26,7 @@
 		5FCE69BF1350B73600C591F4 /* OnTheGridTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE69BE1350B73600C591F4 /* OnTheGridTests.m */; };
 		5FCE69CB1350B75500C591F4 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE69C91350B75500C591F4 /* MainWindow-iPad.xib */; };
 		5FCE69D11350BA4C00C591F4 /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE69D01350BA4C00C591F4 /* GridView.m */; };
+		5FCE69E81351262400C591F4 /* CGPointObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE69E71351262400C591F4 /* CGPointObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		5FCE69CA1350B75500C591F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		5FCE69CF1350BA4B00C591F4 /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridView.h; path = OnTheGrid.xcodeproj/GridView.h; sourceTree = SOURCE_ROOT; };
 		5FCE69D01350BA4C00C591F4 /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridView.m; path = OnTheGrid.xcodeproj/GridView.m; sourceTree = SOURCE_ROOT; };
+		5FCE69E61351262400C591F4 /* CGPointObject.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CGPointObject.h; sourceTree = "<group>"; };
+		5FCE69E71351262400C591F4 /* CGPointObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPointObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,15 +128,17 @@
 			children = (
 				5FCE69CF1350BA4B00C591F4 /* GridView.h */,
 				5FCE69D01350BA4C00C591F4 /* GridView.m */,
+				5FCE69E61351262400C591F4 /* CGPointObject.h */,
+				5FCE69E71351262400C591F4 /* CGPointObject.m */,
 				5FCE69C81350B74A00C591F4 /* iPad */,
 				5FCE699A1350B73500C591F4 /* OnTheGridAppDelegate.h */,
 				5FCE699B1350B73500C591F4 /* OnTheGridAppDelegate.m */,
-				5FCE699D1350B73600C591F4 /* MainWindow.xib */,
 				5FCE69A01350B73600C591F4 /* MainViewController.h */,
 				5FCE69A11350B73600C591F4 /* MainViewController.m */,
-				5FCE69A31350B73600C591F4 /* MainView.xib */,
 				5FCE69A51350B73600C591F4 /* FlipsideViewController.h */,
 				5FCE69A61350B73600C591F4 /* FlipsideViewController.m */,
+				5FCE699D1350B73600C591F4 /* MainWindow.xib */,
+				5FCE69A31350B73600C591F4 /* MainView.xib */,
 				5FCE69A81350B73600C591F4 /* FlipsideView.xib */,
 				5FCE69921350B73500C591F4 /* Supporting Files */,
 			);
@@ -294,6 +299,7 @@
 				5FCE69A21350B73600C591F4 /* MainViewController.m in Sources */,
 				5FCE69A71350B73600C591F4 /* FlipsideViewController.m in Sources */,
 				5FCE69D11350BA4C00C591F4 /* GridView.m in Sources */,
+				5FCE69E81351262400C591F4 /* CGPointObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +485,7 @@
 				5FCE69C41350B73600C591F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5FCE69C51350B73600C591F4 /* Build configuration list for PBXNativeTarget "OnTheGridTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +494,7 @@
 				5FCE69C71350B73600C591F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

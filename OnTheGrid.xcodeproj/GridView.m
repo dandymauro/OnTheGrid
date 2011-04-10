@@ -7,11 +7,13 @@
 //
 
 #import "GridView.h"
+#import "CGPointObject.h"
 
 
 @implementation GridView
 
 @synthesize cellSize, touchPoint;
+@synthesize liveCells;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -26,7 +28,8 @@
 
 - (void)awakeFromNib{
     cellSize = CELLSIZE;
-    touchPoint = CGPointMake(-1.0,-1.0);
+    touchPoint = CGPointMake(-10.0,-10.0);
+    liveCells = [[NSMutableArray alloc]init];
 }
 
 
@@ -61,18 +64,41 @@
     } 
     // actually draw the grid
     [drawingPath stroke];
-    NSLog(@"touchPoint x = %f, y = %f", touchPoint.x, touchPoint.y);
-    // find x & y point for cell size
+    
+    // add latest touch point to array of touched points
     int xCell = (touchPoint.x / cellSize);
     xCell = xCell * cellSize;
     int yCell = touchPoint.y / cellSize;
     yCell = yCell * cellSize;
-    UIBezierPath *fillPath = [UIBezierPath bezierPathWithRect:CGRectMake(xCell, yCell, cellSize, cellSize)];
-    [fillPath fill];    
+
+    CGPointObject *cellPointObj = [[CGPointObject alloc]init];
+    [cellPointObj setX:xCell];
+    [cellPointObj setY:yCell];
+    [liveCells addObject:cellPointObj];
+
+    
+    // draw touched points
+    for(int i=0;i < liveCells.count;i++){
+        CGPointObject *aCellPointObj = [liveCells objectAtIndex:i];
+        int xCell = ([aCellPointObj getX] / cellSize);
+        xCell = xCell * cellSize;
+        int yCell = [aCellPointObj getY] / cellSize;
+        yCell = yCell * cellSize;
+        CGRect cellRect = CGRectMake(xCell, yCell, cellSize, cellSize);
+        UIBezierPath *fillPath = [UIBezierPath bezierPathWithRect:cellRect];
+        [fillPath fill]; 
+    }
+}
+
+- (void) resetGrid{
+    [liveCells release];
+    liveCells = [[NSMutableArray alloc] init];
+    touchPoint = CGPointMake(-10.0,-10.0);
 }
 
 - (void)dealloc
 {
+    [liveCells release];
     [super dealloc];
 }
 

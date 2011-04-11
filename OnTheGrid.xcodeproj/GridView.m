@@ -26,7 +26,7 @@
 
 - (void)awakeFromNib{
     cellSize = CELLSIZE;
-    touchPoint = CGPointMake(0.0,0.0);
+    touchPoint = CGPointMake(-10.0,-10.0);
     doGeneration = NO;
     for(int i=0;i<320;i++){
         for(int j=0;j<480;j++){
@@ -72,10 +72,15 @@
     // actually draw the grid
     [drawingPath stroke];
     
-    // add latest touch point to array of touched points
-    int xCell = (touchPoint.x / cellSize);
-    int yCell = touchPoint.y / cellSize;
-    cells[xCell][yCell] = YES;
+    int xCell, yCell;
+    // add latest touch point to array of touched points.
+    // -10 touchpoint is off grid default if no point touched
+    if(touchPoint.x != -10){
+        xCell = (touchPoint.x / cellSize);
+        yCell = touchPoint.y / cellSize;
+        cells[xCell][yCell] = YES;
+        touchPoint = CGPointMake(-10.0,-10.0);
+    }
     
     if(doGeneration)
         [self checkNeighborsAndSetLiveness];
@@ -101,6 +106,8 @@
 // Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 - (void) checkNeighborsAndSetLiveness{
     NSLog(@"Checking numNeighbors and setting liveness");
+    BOOL newCells[320][480];
+    
     for(int i=0;i<320;i++){
         for(int j=0;j<480;j++){
             int numNeighbors = 0;
@@ -125,17 +132,25 @@
                 NSLog(@"%@ cell [%d][%d] has %d neighbors", cells[i][j] == YES ? @"Live":@"Dead", i,j,numNeighbors);
 
                 if((numNeighbors < 2) || (numNeighbors > 3)) 
-                    cells[i][j] = NO;
+                    newCells[i][j] = NO;
+                else
+                    newCells[i][j] = YES;
             }
             else{
                 if(numNeighbors == 3)
-                    cells[i][j] = YES;
+                    newCells[i][j] = YES;
+                else
+                    newCells[i][j] = NO;
             }
-            [[UIColor redColor] set];
-            [[NSString stringWithFormat:@"%d", numNeighbors] drawAtPoint:CGPointMake(i*cellSize, j*cellSize) withFont:[UIFont systemFontOfSize:8.0]]; 
+            //[[UIColor redColor] set];
+            //[[NSString stringWithFormat:@"%d", numNeighbors] drawAtPoint:CGPointMake(i*cellSize, j*cellSize) withFont:[UIFont systemFontOfSize:8.0]]; 
+        }//for j
+    }//for i
+    for(int i=0;i<320;i++){
+        for(int j=0;j<480;j++){
+            cells[i][j] = newCells[i][j];
         }
     }
-    
 }
 
 - (void) resetGrid{
@@ -144,7 +159,7 @@
             cells[i][j] = NO;
         }
     }
-    touchPoint = CGPointMake(0.0,0.0);
+    touchPoint = CGPointMake(-10.0,-10.0);
 }
 
 - (void)dealloc

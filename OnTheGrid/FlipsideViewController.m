@@ -12,6 +12,8 @@
 @implementation FlipsideViewController
 @synthesize cellSizeSlider = _cellSizeSlider;
 @synthesize cellSizeSliderLabel = _cellSizeSliderLabel;
+@synthesize generationTimerSlider = _generationTimerSlider;
+@synthesize generationTimerSliderLabel = _generationTimerSliderLabel;
 
 @synthesize delegate=_delegate;
 
@@ -61,9 +63,11 @@
 }
 
 - (IBAction)sliderValueChanged:(id)sender {
-    //NSLog(@"sliderValueChanged");
     int cellSizeSliderValue = self.cellSizeSlider.value * 100;
-    //NSLog(@"%@",[NSString stringWithFormat:@"%d", cellSizeSliderValue]);
     self.cellSizeSliderLabel.text = [NSString stringWithFormat:@"%d", cellSizeSliderValue];
+    
+    int generationTimerSliderValue = self.generationTimerSlider.value * 100;
+    self.generationTimerSliderLabel.text = [NSString stringWithFormat:@"%d", generationTimerSliderValue];
+
 }
 @end

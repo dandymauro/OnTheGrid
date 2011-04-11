@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CGPointObject.h"
 
-#define CELLSIZE 50
+#define CELLSIZE 10
 
 
 @interface GridView : UIView {
@@ -27,6 +27,6 @@
 
 - (void) awakeFromNib;
 - (void) resetGrid;
-
+- (void) checkNeighborsAndSetLiveness;
 
 @end

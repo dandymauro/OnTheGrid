@@ -10,9 +10,12 @@
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate> {
     NSTimer *generationTimer;
+    float generationTimerDelay;
+    FlipsideViewController *settingsViewController;
 }
 
-
+@property(assign, readwrite)float generationTimerDelay;
+@property(nonatomic, retain)FlipsideViewController *settingsViewController;
 - (IBAction)showInfo:(id)sender;
 - (void)createGestureRecognizers;
 - (IBAction)handleSingleTap:(UIGestureRecognizer *)sender;

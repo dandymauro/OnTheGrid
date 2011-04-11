@@ -10,13 +10,19 @@
 #import "GridView.h"
 
 @implementation MainViewController
-
+@synthesize generationTimerDelay;
+@synthesize settingsViewController;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    generationTimerDelay = 0.5;
     [self createGestureRecognizers];
+    settingsViewController = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
+    settingsViewController.delegate = self;
+
+
 }
 
 
@@ -26,18 +32,18 @@
     int cellSize = controller.cellSizeSlider.value * 100;
     NSLog(@"Setting cellSize to %d", cellSize);
     ((GridView *)[self.view.subviews objectAtIndex:0]).cellSize = cellSize;
+    generationTimerDelay = controller.generationTimerSlider.value;
+    NSLog(@"Setting generation timer delay to %f", generationTimerDelay);
     [[self.view.subviews objectAtIndex:0] setNeedsDisplay];
 }
 
 - (IBAction)showInfo:(id)sender
 {    
-    FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
-    controller.delegate = self;
+    [self handlePauseButton];
+    settingsViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentModalViewController:settingsViewController animated:YES];
     
-    controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self presentModalViewController:controller animated:YES];
-    
-    [controller release];
+    //[controller release];
 }
 
 - (void)createGestureRecognizers {
@@ -64,7 +70,7 @@
 }
 
 - (IBAction)handlePlayButton{
-    generationTimer = [NSTimer scheduledTimerWithTimeInterval:0.45 
+    generationTimer = [NSTimer scheduledTimerWithTimeInterval:generationTimerDelay 
                                     target:self 
                                     selector:@selector(doGeneration) 
                                     userInfo:nil 

@@ -27,6 +27,9 @@
 		5FCE69CB1350B75500C591F4 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE69C91350B75500C591F4 /* MainWindow-iPad.xib */; };
 		5FCE69D11350BA4C00C591F4 /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE69D01350BA4C00C591F4 /* GridView.m */; };
 		5FCE69E81351262400C591F4 /* CGPointObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE69E71351262400C591F4 /* CGPointObject.m */; };
+		5FCE6A37135336F100C591F4 /* ipad-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE6A36135336F100C591F4 /* ipad-icon.png */; };
+		5FCE6A391353372A00C591F4 /* iphone-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE6A381353372A00C591F4 /* iphone-icon.png */; };
+		5FCE6A3B1353375C00C591F4 /* iphone-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE6A3A1353375C00C591F4 /* iphone-icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +69,11 @@
 		5FCE69CA1350B75500C591F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		5FCE69CF1350BA4B00C591F4 /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridView.h; path = OnTheGrid.xcodeproj/GridView.h; sourceTree = SOURCE_ROOT; };
 		5FCE69D01350BA4C00C591F4 /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridView.m; path = OnTheGrid.xcodeproj/GridView.m; sourceTree = SOURCE_ROOT; };
-		5FCE69E61351262400C591F4 /* CGPointObject.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CGPointObject.h; sourceTree = "<group>"; };
+		5FCE69E61351262400C591F4 /* CGPointObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPointObject.h; sourceTree = "<group>"; };
 		5FCE69E71351262400C591F4 /* CGPointObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPointObject.m; sourceTree = "<group>"; };
+		5FCE6A36135336F100C591F4 /* ipad-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-icon.png"; sourceTree = "<group>"; };
+		5FCE6A381353372A00C591F4 /* iphone-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-icon.png"; sourceTree = "<group>"; };
+		5FCE6A3A1353375C00C591F4 /* iphone-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,9 @@
 		5FCE697C1350B73500C591F4 = {
 			isa = PBXGroup;
 			children = (
+				5FCE6A3A1353375C00C591F4 /* iphone-icon@2x.png */,
+				5FCE6A381353372A00C591F4 /* iphone-icon.png */,
+				5FCE6A36135336F100C591F4 /* ipad-icon.png */,
 				5FCE69911350B73500C591F4 /* OnTheGrid */,
 				5FCE69B51350B73600C591F4 /* OnTheGridTests */,
 				5FCE698A1350B73500C591F4 /* Frameworks */,
@@ -259,6 +268,9 @@
 				5FCE69A41350B73600C591F4 /* MainView.xib in Resources */,
 				5FCE69A91350B73600C591F4 /* FlipsideView.xib in Resources */,
 				5FCE69CB1350B75500C591F4 /* MainWindow-iPad.xib in Resources */,
+				5FCE6A37135336F100C591F4 /* ipad-icon.png in Resources */,
+				5FCE6A391353372A00C591F4 /* iphone-icon.png in Resources */,
+				5FCE6A3B1353375C00C591F4 /* iphone-icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

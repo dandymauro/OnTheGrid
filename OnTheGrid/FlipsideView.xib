@@ -81,7 +81,7 @@
 						<reference key="NSNextKeyView" ref="967052905"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentHorizontalAlignment">3</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<float key="IBUIValue">0.5</float>
 					</object>
@@ -135,10 +135,9 @@
 						<string key="NSFrame">{{18, 142}, {284, 23}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentHorizontalAlignment">3</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<float key="IBUIValue">0.5</float>
 					</object>

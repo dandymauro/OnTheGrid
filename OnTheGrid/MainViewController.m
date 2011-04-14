@@ -64,6 +64,23 @@
 //    [UIView commitAnimations];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan");
+    UITouch *touch = [touches anyObject];
+    CGPoint tapPoint = [touch locationInView:[self.view.subviews objectAtIndex:0]];
+    ((GridView *)[self.view.subviews objectAtIndex:0]).touchPoint = tapPoint;
+    [[self.view.subviews objectAtIndex:0] setNeedsDisplay];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"TouchesMoved");
+    UITouch *touch = [touches anyObject];
+    CGPoint tapPoint = [touch locationInView:[self.view.subviews objectAtIndex:0]];
+    ((GridView *)[self.view.subviews objectAtIndex:0]).touchPoint = tapPoint;
+    [[self.view.subviews objectAtIndex:0] setNeedsDisplay];
+    
+}
+
 - (IBAction)handleClearButton{
     [((GridView *)[self.view.subviews objectAtIndex:0]) resetGrid];
     [[self.view.subviews objectAtIndex:0] setNeedsDisplay];
@@ -78,6 +95,7 @@
 }
 
 - (IBAction)handlePauseButton{
+    NSLog(@"handlePauseButton");
     [generationTimer invalidate];
     generationTimer = nil; // ensures we never invalidate an already invalid Timer
     ((GridView *)[self.view.subviews objectAtIndex:0]).doGeneration = NO;

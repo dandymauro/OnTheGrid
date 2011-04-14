@@ -19,6 +19,8 @@
 - (IBAction)showInfo:(id)sender;
 - (void)createGestureRecognizers;
 - (IBAction)handleSingleTap:(UIGestureRecognizer *)sender;
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
 - (IBAction)handleClearButton;
 - (IBAction)handlePlayButton;
 - (IBAction)handlePauseButton;

@@ -11,7 +11,7 @@
 @implementation GridView
 
 @synthesize cellSize, touchPoint;
-@synthesize liveCells, doGeneration;
+@synthesize doGeneration;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -35,14 +35,6 @@
     }
 }
 
-- (void)setCellSize:(int)aCellSize{
-    cellSize = aCellSize;
-    NSLog(@"bounds width %d height %d", self.bounds.size.width, self.bounds.size.height);
-}
-
-
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
     NSLog(@"drawRect");
@@ -53,7 +45,7 @@
     NSLog(@"width = %d, height = %d, cell-size = %d", width, height, cellSize);
     
     // Set the color in the current graphics context for future draw operations
-    [[UIColor lightGrayColor] setStroke];
+    [[[UIColor lightGrayColor]autorelease] setStroke];
     
     // Create our drawing path
     UIBezierPath* drawingPath = [UIBezierPath bezierPath];
@@ -85,7 +77,7 @@
     if(doGeneration)
         [self checkNeighborsAndSetLiveness];
     // draw touched points
-    [[UIColor lightGrayColor] setStroke];
+    [[[UIColor lightGrayColor]autorelease] setStroke];
     for(int i=0;i<320;i++){
         for(int j=0;j<480;j++){
             if(cells[i][j] == YES){

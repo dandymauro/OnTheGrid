@@ -26,10 +26,10 @@
 		5FCE69BF1350B73600C591F4 /* OnTheGridTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE69BE1350B73600C591F4 /* OnTheGridTests.m */; };
 		5FCE69CB1350B75500C591F4 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE69C91350B75500C591F4 /* MainWindow-iPad.xib */; };
 		5FCE69D11350BA4C00C591F4 /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE69D01350BA4C00C591F4 /* GridView.m */; };
-		5FCE69E81351262400C591F4 /* CGPointObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE69E71351262400C591F4 /* CGPointObject.m */; };
 		5FCE6A37135336F100C591F4 /* ipad-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE6A36135336F100C591F4 /* ipad-icon.png */; };
 		5FCE6A391353372A00C591F4 /* iphone-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE6A381353372A00C591F4 /* iphone-icon.png */; };
 		5FCE6A3B1353375C00C591F4 /* iphone-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE6A3A1353375C00C591F4 /* iphone-icon@2x.png */; };
+		5FD3FE47135B677F00C44F1A /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD3FE46135B677F00C44F1A /* libFlurry.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,11 +69,11 @@
 		5FCE69CA1350B75500C591F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		5FCE69CF1350BA4B00C591F4 /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridView.h; path = OnTheGrid.xcodeproj/GridView.h; sourceTree = SOURCE_ROOT; };
 		5FCE69D01350BA4C00C591F4 /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridView.m; path = OnTheGrid.xcodeproj/GridView.m; sourceTree = SOURCE_ROOT; };
-		5FCE69E61351262400C591F4 /* CGPointObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPointObject.h; sourceTree = "<group>"; };
-		5FCE69E71351262400C591F4 /* CGPointObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPointObject.m; sourceTree = "<group>"; };
 		5FCE6A36135336F100C591F4 /* ipad-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-icon.png"; sourceTree = "<group>"; };
 		5FCE6A381353372A00C591F4 /* iphone-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-icon.png"; sourceTree = "<group>"; };
 		5FCE6A3A1353375C00C591F4 /* iphone-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-icon@2x.png"; sourceTree = "<group>"; };
+		5FD3FE45135B677F00C44F1A /* FlurryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAPI.h; sourceTree = "<group>"; };
+		5FD3FE46135B677F00C44F1A /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +84,7 @@
 				5FCE698C1350B73500C591F4 /* UIKit.framework in Frameworks */,
 				5FCE698E1350B73500C591F4 /* Foundation.framework in Frameworks */,
 				5FCE69901350B73500C591F4 /* CoreGraphics.framework in Frameworks */,
+				5FD3FE47135B677F00C44F1A /* libFlurry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +107,8 @@
 				5FCE6A3A1353375C00C591F4 /* iphone-icon@2x.png */,
 				5FCE6A381353372A00C591F4 /* iphone-icon.png */,
 				5FCE6A36135336F100C591F4 /* ipad-icon.png */,
+				5FD3FE45135B677F00C44F1A /* FlurryAPI.h */,
+				5FD3FE46135B677F00C44F1A /* libFlurry.a */,
 				5FCE69911350B73500C591F4 /* OnTheGrid */,
 				5FCE69B51350B73600C591F4 /* OnTheGridTests */,
 				5FCE698A1350B73500C591F4 /* Frameworks */,
@@ -137,8 +140,6 @@
 			children = (
 				5FCE69CF1350BA4B00C591F4 /* GridView.h */,
 				5FCE69D01350BA4C00C591F4 /* GridView.m */,
-				5FCE69E61351262400C591F4 /* CGPointObject.h */,
-				5FCE69E71351262400C591F4 /* CGPointObject.m */,
 				5FCE69C81350B74A00C591F4 /* iPad */,
 				5FCE699A1350B73500C591F4 /* OnTheGridAppDelegate.h */,
 				5FCE699B1350B73500C591F4 /* OnTheGridAppDelegate.m */,
@@ -311,7 +312,6 @@
 				5FCE69A21350B73600C591F4 /* MainViewController.m in Sources */,
 				5FCE69A71350B73600C591F4 /* FlipsideViewController.m in Sources */,
 				5FCE69D11350BA4C00C591F4 /* GridView.m in Sources */,
-				5FCE69E81351262400C591F4 /* CGPointObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +411,10 @@
 				INFOPLIST_FILE = "OnTheGrid/OnTheGrid-Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -427,6 +431,10 @@
 				INFOPLIST_FILE = "OnTheGrid/OnTheGrid-Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

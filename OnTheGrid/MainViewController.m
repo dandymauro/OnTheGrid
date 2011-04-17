@@ -52,6 +52,10 @@
     singleFingerTap.numberOfTapsRequired = 1;
     [[self.view.subviews objectAtIndex:0] addGestureRecognizer:singleFingerTap];
     [singleFingerTap release];
+    
+    UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(handlePinch:)];
+    [[self.view.subviews objectAtIndex:0] addGestureRecognizer:pinch];
+    [pinch release];
 }
 
 - (IBAction)handleSingleTap:(UIGestureRecognizer *)sender {
@@ -62,6 +66,24 @@
 //    [UIView beginAnimations:nil context:NULL];
 //    sender.view.center = tapPoint;
 //    [UIView commitAnimations];
+}
+
+- (IBAction)handlePinch:(UIGestureRecognizer *)sender {
+    float scale = ((UIPinchGestureRecognizer *)sender).scale;
+    float velocity = ((UIPinchGestureRecognizer *)sender).velocity;
+    NSLog(@"handlePinch: scale: %f  velocity: %f", scale, velocity);
+    int oldCellSize = ((GridView *)[self.view.subviews objectAtIndex:0]).cellSize;    
+    int newCellSize = (scale * 100);
+    if(velocity > 0){
+        ((GridView *)[self.view.subviews objectAtIndex:0]).cellSize = (newCellSize > oldCellSize) ? newCellSize*0.5:oldCellSize;
+    }
+    else{
+        newCellSize-= 30;
+        newCellSize = (newCellSize > 0) ? newCellSize:4;
+        ((GridView *)[self.view.subviews objectAtIndex:0]).cellSize = (newCellSize < oldCellSize) ? newCellSize:oldCellSize;
+    }
+
+    [[self.view.subviews objectAtIndex:0] setNeedsDisplay];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -117,6 +139,7 @@
 
 - (void)didReceiveMemoryWarning
 {
+    NSLog(@"didReceiveMemoryWarning");
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     

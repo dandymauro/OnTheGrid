@@ -9,6 +9,7 @@
 #import "OnTheGridAppDelegate.h"
 
 #import "MainViewController.h"
+#import "FlurryAPI.h"
 
 @implementation OnTheGridAppDelegate
 
@@ -20,6 +21,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [FlurryAPI startSession:@"5JYQ7ASDPWC66UB5GCF2"];
+
     // Add the main view controller's view to the window and display.
     self.window.rootViewController = self.mainViewController;
     [self.window makeKeyAndVisible];
